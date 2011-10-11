@@ -1,0 +1,6 @@
+self: play -> protobuf 1.0
+
+require:
+    - play
+    - com.google.protobuf -> protobuf-java 2.4.1
+
