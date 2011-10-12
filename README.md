@@ -8,7 +8,7 @@ It is protocol-compatible with [ProtoRPC](http://code.google.com/appengine/docs/
 // Let's be compatible with mobile phones
 option optimize_for = LITE_RUNTIME;
 
-// Generated messages should be subclasses of com.github.jcayzac.Protos
+// Generated messages will be inner classes of com.github.jcayzac.Protos
 option java_package = "com.github.jcayzac";
 option java_outer_classname = "Protos";
 
@@ -38,7 +38,7 @@ public class MyRpc extends Controller {
         Protos.MyResponse.Builder response = Protos.MyResponse.newBuilder();
         response.setValue(doSomething(request.getName(), request.getAge()));
 
-        // controllers.PBActions is provided my Play-Protobuf.
+        // controllers.PBActions is provided by Play-Protobuf.
         PBActions.render(response.build());
     }
 }

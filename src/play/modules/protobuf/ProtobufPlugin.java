@@ -29,12 +29,12 @@ public class ProtobufPlugin extends PlayPlugin {
 	}
 
 	@Override
-	public void onApplicationStart() {
+	public final void onApplicationStart() {
 		DataParser.parsers.put(
 			"application/x-google-protobuf",
 			new DataParser() {
 				@Override
-				public Map<String, String[]> parse(InputStream is) {
+				public Map<String, String[]> parse(final InputStream is) {
 					try {
 						Request.current().args.put(
 							MAGIC_ARGUMENT_NAME,
@@ -51,11 +51,11 @@ public class ProtobufPlugin extends PlayPlugin {
 		Binder.register(AbstractMessageLite.class, new TypeBinder<AbstractMessageLite>() {
 			@Override
 			public Object bind(
-				String name,
-				Annotation[] annotations,
-				String value,
-				Class actualClass,
-				Type genericType
+				final String name,
+				final Annotation[] annotations,
+				final String value,
+				final Class actualClass,
+				final Type genericType
 			) throws Exception {
 				@SuppressWarnings("unchecked")
 				Method m = actualClass.getMethod("parseFrom", new Class[] {ByteString.class});
