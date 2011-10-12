@@ -8,11 +8,6 @@ It is protocol-compatible with [ProtoRPC](http://code.google.com/appengine/docs/
 // Let's be compatible with mobile phones
 option optimize_for = LITE_RUNTIME;
 
-// Disable Google's legacy API
-option cc_generic_services = false;
-option java_generic_services = false;
-option py_generic_services = false;
-
 // Generated messages should be subclasses of com.github.jcayzac.Protos
 option java_package = "com.github.jcayzac";
 option java_outer_classname = "Protos";
