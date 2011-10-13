@@ -59,7 +59,7 @@ value: 'Hello, Bob X!'
 
 * The RPC methods must have one argument, and one only.
 * The RPC methods' single argument should always be named **request**. Otherwise the magic won't work.
-* The requests must have their content-type set to **application/x-google-protobuf**. Responses rendered with **PBActions.render()** will be served with that MIME type, too.
+* The requests must have their content-type set to **application/x-google-protobuf**. Responses rendered with **renderProto()** will be served with that MIME type, too.
 
 ## Known issues or shortcomings
 
