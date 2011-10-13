@@ -29,7 +29,8 @@ public class ProtobufPlugin extends PlayPlugin {
 	}
 
 	@Override
-	public final void onApplicationStart() {
+	public void onApplicationStart() {
+	    System.err.println("I'M STARTED!");
 		DataParser.parsers.put(
 			"application/x-google-protobuf",
 			new DataParser() {
@@ -64,5 +65,6 @@ public class ProtobufPlugin extends PlayPlugin {
 				});
 			}
 		});
+		System.err.println("I'M INITIALIZED!");
 	}
 }

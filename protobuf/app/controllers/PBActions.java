@@ -7,7 +7,7 @@ import play.mvc.Controller;
 import play.mvc.results.RenderBinary;
 
 public class PBActions {
-    public static void renderProto(final AbstractMessageLite message) {
+    public static void render(final AbstractMessageLite message) {
         throw new RenderBinary(
             new ByteArrayInputStream(message.toByteArray()),
             null,

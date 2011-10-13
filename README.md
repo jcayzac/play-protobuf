@@ -33,14 +33,13 @@ package controllers;
 import play.mvc.Controller;
 import com.github.jcayzac.Protos;
 
-@With(PBActions.class)
 public class MyRpc extends Controller {
 
     public static void myRPCMethod(final Protos.MyRequest request) {
         Protos.MyResponse.Builder response = Protos.MyResponse.newBuilder();
         response.setValue(doSomething(request.getName(), request.getAge()));
 
-        renderProto(response.build());
+        PBActions.render(response.build());
     }
 }
 ```
