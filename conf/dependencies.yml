@@ -1,4 +1,4 @@
-self: play -> protobuf 1.0
+self: play -> protobuf $version
 
 require:
     - play
